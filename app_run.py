@@ -35,10 +35,7 @@ app.layout = html.Div([
         dcc.Graph(id='critic-graph')
     ], className='container mt-5'),
     html.Div([
-        
-        dcc.Graph(id='pie-chart-content'),
-        html.Button('Update Pie Chart', id='update-pie-chart-button', className='btn btn-primary mt-2')
-
+       dcc.Graph(id='pie-chart-content', figure=create_pie_chart(df))
     ], className='container mt-5')
 ])
 
@@ -66,9 +63,9 @@ def update_critic_graph_callback(n_clicks):
 
 @app.callback(
     Output('pie-chart-content', 'figure'),
-    [Input('update-pie-chart-button', 'n_clicks')]
+    [Input('pie-chart-content', 'id')]
 )
-def update_pie_chart(n_clicks):
+def display_pie_chart(id):
     return create_pie_chart(df)
 
 
