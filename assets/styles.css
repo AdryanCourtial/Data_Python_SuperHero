@@ -53,3 +53,7 @@ body {
     display: block;
     margin: 10px;
   }
+
+  .all_content {
+    background-color: blueviolet;
+  }

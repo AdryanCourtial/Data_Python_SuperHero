@@ -4,6 +4,7 @@ from dash import Dash, html, dcc, callback, Output, Input, State
 from graph.film_graph import update_film_graph
 from graph.comparison_graph import update_main_graph
 from graph.critic_graph import update_critic_graph
+from graph.pie_chart import create_pie_chart
 
 df = pd.read_csv('data/DATA_ESSAiE2.csv', delimiter=';')
 
@@ -32,6 +33,12 @@ app.layout = html.Div([
     ], className='container mt-5'),
     html.Div([
         dcc.Graph(id='critic-graph')
+    ], className='container mt-5'),
+    html.Div([
+        
+        dcc.Graph(id='pie-chart-content'),
+        html.Button('Update Pie Chart', id='update-pie-chart-button', className='btn btn-primary mt-2')
+
     ], className='container mt-5')
 ])
 
@@ -57,6 +64,12 @@ def update_comparison(hover_data):
 def update_critic_graph_callback(n_clicks):
     return update_critic_graph(df)
 
+@app.callback(
+    Output('pie-chart-content', 'figure'),
+    [Input('update-pie-chart-button', 'n_clicks')]
+)
+def update_pie_chart(n_clicks):
+    return create_pie_chart(df)
 
 
 if __name__ == '__main__':

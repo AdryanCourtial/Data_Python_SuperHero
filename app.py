@@ -1,4 +1,7 @@
-from dash import Dash, html, page_container
+from dash import Dash, html, Output, Input, State, page_container
+import pandas as pd
+
+df = pd.read_csv('data/DATA_ESSAiE2.csv', delimiter=';')
 
 app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
 
@@ -10,7 +13,7 @@ app.layout = html.Div(
                 html.Div(
                     className="logo",
                     children= [
-                        html.Span('MonSuperSite'),
+                        html.A('MonSuperSite', href='/'),
                     ]
                 ),
                 html.Div(
@@ -24,7 +27,7 @@ app.layout = html.Div(
         page_container
     ]
 )
-if __name__ == '__main__':
-    app.run_server(debug=True)
+
+app.run_server(port=8051, debug=True)
 
 
