@@ -8,11 +8,12 @@ register_page(__name__, path='/')
 
 # Layout
 layout = html.Div(
+    className="main_body",
     children=[
         html.Div(
             className="sidebar",
             children=[
-                html.A("Contenue 1"),
+                html.A("Contenue 1", href="#content-1"),
                 html.A("Contenue 2"),
                 html.A("Contenue 3"),
                 html.A("Contenue 4"),
@@ -20,10 +21,10 @@ layout = html.Div(
             ]
         ),
         html.Div(
-            className="all_content",
+            className="content",
             children=[
                 html.Div(
-                    className="reel_body",
+                    className="content-1",
                     children = [
                         html.H2("Recette Généré dans le monde entier (Brute)"),
                         html.Div([

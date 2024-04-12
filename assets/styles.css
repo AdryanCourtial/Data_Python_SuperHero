@@ -1,9 +1,20 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  padding-left: 175px; /* Ajustez le remplissage pour laisser de l'espace pour la barre latérale */
-}
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    font-family: 'M PLUS 1 Code', sans-serif;
+  }
+
+  a:visited,
+  a:active {
+    text-decoration: none;
+  }
+
+  a:hover {
+    border: black solid 1px;
+    border-radius: 10px;
+    color: blue;
+  }
   
   .visite-bar {
     background-color: #7fff00; /* Citron vert */
@@ -13,10 +24,17 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    border: 1px solid black;
+    border-collapse: unset;
   }
   
   .logo {
     font-size: 24px;
+  }
+
+
+  .logo a {
+    text-decoration: none;
   }
   
   .site-name {
@@ -26,69 +44,44 @@ body {
   .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 10px;
   }
   
   .nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
   
-  .content {
-    padding: 16px;
-    margin-top: 50px;
-  }
-
-  /* .sidebar {
-    height: 100%;
-    width: 175px;
-    top: auto;
-    left: 0%;
-    background-color: aqua;
-    position: fixed;
-    text-align: center;
-    vertical-align: center;
-    padding-top: 50px;
-    position: relative;
-  }
 
   .sidebar a {
     display: block;
   }
 
-  .all_content {
-    background-color: blueviolet;
-  }
 
-  .container mt-5 {
-    height: 100px;
-    width: 100px;
-  } */
-
-
-  /* CSS */
+.main_body {
+  display: flex;
+  height: 100vh;
+}
 
 .sidebar {
-  height: 100%;
-  width: 175px;
-  background-color: aqua;
-  position: fixed;
-  top: auto;
-  left: 0;
+  flex: 0 0 200px; 
+  background-color: #f4f4f4;
   padding-top: 50px;
+  border: 1px solid black;
+  padding: 1px;
 }
 
 .sidebar a {
-  display: block;
+  text-align: center;
+  margin: 10px;
 }
 
-.all_content {
-  background-color: blueviolet;
-}
-
-.container {
-  margin-left: 200px; /* Ajustement du contenu pour laisser de l'espace à la barre latérale */
-}
-
-.reel_body {
-  position: relative;
+.content {
+  flex: 1; 
+  background-color: #fff;
+  padding: 20px;
+  padding-top: 100px;
+  padding-left: 100px;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  box-shadow: inset;
+  border: 1px solid black;
 }

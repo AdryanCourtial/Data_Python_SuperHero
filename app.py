@@ -1,9 +1,9 @@
-from dash import Dash, html, Output, Input, State, page_container
+from dash import Dash, html, page_container
 import pandas as pd
 
 df = pd.read_csv('data/DATA_ESSAiE2.csv', delimiter=';')
 
-external_stylesheets = ['https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css']
+external_stylesheets = ['https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', "https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"]
 app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True,  external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(
