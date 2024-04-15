@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: rgb(135, 86, 86);
     font-family: 'M PLUS 1 Code', sans-serif;
   }
 
@@ -60,6 +60,7 @@ body {
 .main_body {
   display: flex;
   height: 100vh;
+  border: 1px solid black;
 }
 
 .sidebar {
@@ -68,6 +69,9 @@ body {
   padding-top: 50px;
   border: 1px solid black;
   padding: 1px;
+  margin-right: 10px;
+  border-top: none;
+  position: fixed;
 }
 
 .sidebar a {
@@ -83,5 +87,9 @@ body {
   padding-left: 100px;
   font-family: 'M PLUS 1 Code', sans-serif;
   box-shadow: inset;
-  border: 1px solid black;
+}
+
+.flex-item {
+  flex: 1; /* Cela permet à la div de s'étendre pour remplir l'espace disponible */
+  margin-left: 20px; /* Ajoute une marge à gauche pour séparer du contenu voisin */
 }
