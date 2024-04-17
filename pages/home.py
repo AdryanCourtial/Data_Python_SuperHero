@@ -18,10 +18,10 @@ layout = html.Div(
             className="sidebar",
             children=[
                 html.A("Contenue 1", href="#content-1"),
-                html.A("Contenue 2"),
-                html.A("Contenue 3"),
-                html.A("Contenue 4"),
-                html.A("Contenue 5"),
+                html.A("Contenue 2", href="#content-2"),
+                html.A("Contenue 3", href="#content-3"),
+                html.A("Contenue 4", href="#content-4"),
+                
             ]
         ),
         html.Div(
@@ -58,6 +58,28 @@ layout = html.Div(
                             dcc.Graph(id='comparison-graph')
                         ], className='container mt-5'),
                         html.P("""Je Suis le Deuxieme Content Super Interessante, Genre c'est 
+                               improbable personne me lie""")
+                    ]
+                ),
+                html.Div(
+                    id="content-3",
+                    children = [
+                        html.H2("Je suis le Cotent 3"),
+                        html.Div([
+                            dcc.Graph(id='critic-graph')
+                        ], className='container mt-5'),
+                        html.P("""Je Suis le 3 Content Super Interessante, Genre c'est 
+                               improbable personne me lie""")
+                    ]
+                ),
+                html.Div(
+                    id="content-4",
+                    children = [
+                        html.H2("Je suis le Cotent 4"),
+                        html.Div([
+                            dcc.Graph(id='pie-chart-content', figure=create_pie_chart(app.df))
+                            ], className='container mt-5'),
+                        html.P("""Je Suis le 4 Content Super Interessante, Genre c'est 
                                improbable personne me lie""")
                     ]
                 )

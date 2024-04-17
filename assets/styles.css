@@ -17,16 +17,18 @@ body {
   }
   
   .visite-bar {
-    background-color: #7fff00; /* Citron vert */
-    overflow: hidden;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    background-color: #7fff00;
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
     border: 1px solid black;
-    border-collapse: unset;
-  }
+    position: fixed; 
+    width: 100%; 
+    z-index: 999; 
+}
+
   
   .logo {
     font-size: 24px;
@@ -56,6 +58,11 @@ body {
     display: block;
   }
 
+  .sidebar a {
+    text-align: center;
+    margin: 10px;
+  }
+  
 
 .main_body {
   display: flex;
@@ -64,32 +71,27 @@ body {
 }
 
 .sidebar {
-  flex: 0 0 200px; 
-  background-color: #f4f4f4;
-  padding-top: 50px;
-  border: 1px solid black;
-  padding: 1px;
-  margin-right: 10px;
-  border-top: none;
   position: fixed;
-}
-
-.sidebar a {
-  text-align: center;
-  margin: 10px;
+  left: 0;
+  top: 0; 
+  height: 100%; 
+  width: 200px; 
+  background-color: #f4f4f4;
+  padding-top: 50px; 
+  border: 1px solid black;
+  border-top: none;
 }
 
 .content {
-  flex: 1; 
-  background-color: #fff;
+  margin-left: 220px; 
   padding: 20px;
-  padding-top: 100px;
-  padding-left: 100px;
+  padding-top: 100px; 
   font-family: 'M PLUS 1 Code', sans-serif;
-  box-shadow: inset;
+  background-color: #fff;
 }
 
+
 .flex-item {
-  flex: 1; /* Cela permet à la div de s'étendre pour remplir l'espace disponible */
-  margin-left: 20px; /* Ajoute une marge à gauche pour séparer du contenu voisin */
+  flex: 1; 
+  margin-left: 20px;
 }
