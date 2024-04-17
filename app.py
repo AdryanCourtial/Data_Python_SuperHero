@@ -14,7 +14,10 @@ app.layout = html.Div(
                 html.Div(
                     className="logo",
                     children= [
-                        html.A('MonSuperSite', href='/'),
+                        html.A(
+                            html.Img(src='/assets/marvel_dc_logo.ico', alt='Logo de votre site', style={'height': '50px'}),
+                            href='/'
+                        )
                     ]
                 ),
                 html.Div(
