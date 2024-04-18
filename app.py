@@ -15,7 +15,7 @@ app.layout = html.Div(
                     className="logo",
                     children= [
                         html.A(
-                            html.Img(src='/assets/marvel_dc_logo.ico', alt='Logo de votre site', style={'height': '50px'}),
+                            html.Img(className="logo",src='/assets/avengers-logo.png',alt="Je suis Le Logo du site"),
                             href='/'
                         )
                     ]

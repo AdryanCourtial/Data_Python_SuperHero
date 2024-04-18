@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(135, 86, 86);
     font-family: 'M PLUS 1 Code', sans-serif;
   }
 
@@ -14,6 +13,7 @@ body {
     border: black solid 1px;
     border-radius: 10px;
     color: blue;
+    padding: 8px;
   }
   
   .visite-bar {
@@ -27,12 +27,6 @@ body {
     position: fixed; 
     width: 100%; 
     z-index: 999; 
-}
-
-  
-.logo img {
-  width: 100px; 
-  height: auto; 
 }
 
 
@@ -67,8 +61,9 @@ body {
 
 .main_body {
   display: flex;
-  height: 100vh;
+  height: auto;
   border: 1px solid black;
+  border-bottom: none;
 }
 
 .sidebar {
@@ -77,22 +72,43 @@ body {
   top: 0; 
   height: 100%; 
   width: 200px; 
-  background-color: #f4f4f4;
+  background-color: #aaff55;
   padding-top: 50px; 
   border: 1px solid black;
   border-top: none;
+  margin-top: 50px;
 }
 
 .content {
-  margin-left: 220px; 
-  padding: 20px;
+  margin-left: 200px; 
+  width: 100%;
   padding-top: 100px; 
   font-family: 'M PLUS 1 Code', sans-serif;
-  background-color: #fff;
+  background-color: ffffff;
 }
 
 
 .flex-item {
   flex: 1; 
   margin-left: 20px;
+}
+
+#content-1,
+#content-2,
+#content-3,
+#content-4 {
+  border: 1px black solid ;
+  padding: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 25px;
+}
+
+.logo a:hover {
+  border: none;
 }
