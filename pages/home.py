@@ -57,8 +57,10 @@ layout = html.Div(
                         html.Div([
                             dcc.Graph(id='comparison-graph')
                         ], className='container mt-5'),
-                        html.P("""Je Suis le Deuxieme Content Super Interessante, Genre c'est 
-                               improbable personne me lie""")
+                        html.P("""graphique de dispersion  qui compare les recettes mondiales au box-office
+                                par rapport au budget des films pour une année donnée. Si l'utilisateur survole le 
+                               graphique et sélectionne une année spécifique, le graphique sera filtré pour afficher uniquement les films de cette année-là. 
+                               Sinon, si aucune année n'est sélectionnée, le graphique montrera les données pour toutes les années disponibles""")
                     ]
                 ),
                 html.Div(
@@ -68,8 +70,10 @@ layout = html.Div(
                         html.Div([
                             dcc.Graph(id='critic-graph')
                         ], className='container mt-5'),
-                        html.P("""Je Suis le 3 Content Super Interessante, Genre c'est 
-                               improbable personne me lie""")
+                        html.P("""Ce graphique compare les scores moyens des critiques pour les films de Marvel et DC. Il montre
+                                quelle franchise a généralement obtenu de meilleures 
+                               critiques selon les données fournies. Les barres rouges représentent les scores moyens des films Marvel, 
+                               tandis que les barres bleues représentent les scores moyens des films DC.""")
                     ]
                 ),
                 html.Div(
@@ -79,8 +83,7 @@ layout = html.Div(
                         html.Div([
                             dcc.Graph(id='pie-chart-content', figure=create_pie_chart(app.df))
                             ], className='container mt-5'),
-                        html.P("""Je Suis le 4 Content Super Interessante, Genre c'est 
-                               improbable personne me lie""")
+                        html.P("""Cette fonction crée un graphique en secteurs  qui illustre la répartition des recettes mondiales entre différentes franchises de films. Chaque secteur du graphique représente une franchise, et sa taille est proportionnelle à la part des recettes mondiales qu'elle a générée""")
                     ]
                 )
             ]

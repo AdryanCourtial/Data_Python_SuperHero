@@ -103,6 +103,21 @@ body {
   margin-bottom: 5px;
 }
 
+#content-1,
+#content-2,
+#content-3,
+#content-4 p{
+  text-align: center;
+}
+
+#content-1,
+#content-2,
+#content-3,
+#content-4 h2 {
+  margin-left: 50px;
+}
+
+
 .logo {
   height: 50px;
   width: 50px;
