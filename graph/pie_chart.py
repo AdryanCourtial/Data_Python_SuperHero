@@ -7,7 +7,6 @@ def create_pie_chart(df):
 
     fig = px.pie(total_gross_by_franchise, 
                  values='Box office gross Worldwide', 
-                 names='Franchise', 
-                 title='Répartition des recettes mondiales par franchise')
+                 names='Franchise')
 
     return fig

@@ -29,7 +29,6 @@ layout = html.Div(
             children=[
                 html.Div(
                     children = [
-                        html.H1(children='Analyse des données', className='text-center mb-4'),
                         html.Div(
                             id="content-1" ,
                             children= [
@@ -45,15 +44,15 @@ layout = html.Div(
                                 ),
                                 html.Button('Update Film Graph', id='update-film-button', className='btn btn-primary mt-2')
                             ], className='form-group'),
-                            dcc.Graph(id='film-graph-content')
-                        ], className='container mt-5'),
-                        html.P("""Vous pouvez sélectionné différent film pour les comparés, ce graphique représente la Recettes mondiales au box-office pour les films sélectionnés.""")
+                            dcc.Graph(id='film-graph-content'),
+                            html.P("""Vous pouvez sélectionné différent film pour les comparés, ce graphique représente la Recettes mondiales au box-office pour les films sélectionnés."""),
+                        ]),
                     ]
                 ),
                 html.Div(
                     id="content-2",
                     children = [
-                        html.H2("Je suis le Cotent 2"),
+                        html.H2("Des film moins productif du a un manque de budget ?"),
                         html.Div([
                             dcc.Graph(id='comparison-graph')
                         ], className='container mt-5'),
@@ -66,7 +65,7 @@ layout = html.Div(
                 html.Div(
                     id="content-3",
                     children = [
-                        html.H2("Je suis le Cotent 3"),
+                        html.H2("Marvel, d'une Qualité écrasante ?"),
                         html.Div([
                             dcc.Graph(id='critic-graph')
                         ], className='container mt-5'),
@@ -79,7 +78,7 @@ layout = html.Div(
                 html.Div(
                     id="content-4",
                     children = [
-                        html.H2("Je suis le Cotent 4"),
+                        html.H2("Répartition des recettes mondiales par franchise"),
                         html.Div([
                             dcc.Graph(id='pie-chart-content', figure=create_pie_chart(app.df))
                             ], className='container mt-5'),
