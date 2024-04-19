@@ -81,6 +81,7 @@ body {
 
 .content {
   margin-left: 200px; 
+  margin-right: 200px;
   width: 100%;
   padding-top: 100px; 
   font-family: 'M PLUS 1 Code', sans-serif;
@@ -114,8 +115,41 @@ body {
 #content-2,
 #content-3,
 #content-4 h2 {
-  margin-left: 50px;
+  margin-left: auto;
 }
+
+#content-1,
+#content-2,
+#content-3,
+#content-4 {
+    width: calc(100% - 200px);
+    margin-left: 200px; 
+    border: 1px black solid;
+    padding: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#content-1 p,
+#content-2 p,
+#content-3 p,
+#content-4 p,
+#content-1 h2,
+#content-2 h2,
+#content-3 h2,
+#content-4 h2 {
+    text-align: center;
+}
+
+#content-1 h2,
+#content-2 h2,
+#content-3 h2,
+#content-4 h2 {
+    margin-left: 0;
+}
+
+
+
 
 
 .logo {

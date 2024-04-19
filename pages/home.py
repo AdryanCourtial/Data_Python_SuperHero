@@ -29,11 +29,12 @@ layout = html.Div(
             children=[
                 html.Div(
                     children = [
-                        html.H2("Recette Généré dans le monde entier (Brute)"),
+                        html.H1(children='Analyse des données', className='text-center mb-4'),
                         html.Div(
-                            id="content-1",
+                            id="content-1" ,
                             children= [
-                            html.H1(children='Analyse des données', className='text-center mb-4'),
+                            
+                            html.H2("Recette Généré dans le monde entier (Brute)"),
                             html.Div([
                                 dcc.Dropdown(
                                     options=[{'label': film, 'value': film} for film in app.df['Film']],
@@ -46,8 +47,7 @@ layout = html.Div(
                             ], className='form-group'),
                             dcc.Graph(id='film-graph-content')
                         ], className='container mt-5'),
-                        html.P("""Je suis La description de fou mec c'est incroyable
-                                comment baptiste est beau et genre personne le remarque""")
+                        html.P("""Vous pouvez sélectionné différent film pour les comparés, ce graphique représente la Recettes mondiales au box-office pour les films sélectionnés.""")
                     ]
                 ),
                 html.Div(
@@ -57,7 +57,7 @@ layout = html.Div(
                         html.Div([
                             dcc.Graph(id='comparison-graph')
                         ], className='container mt-5'),
-                        html.P("""graphique de dispersion  qui compare les recettes mondiales au box-office
+                        html.P("""Graphique de dispersion  qui compare les recettes mondiales au box-office
                                 par rapport au budget des films pour une année donnée. Si l'utilisateur survole le 
                                graphique et sélectionne une année spécifique, le graphique sera filtré pour afficher uniquement les films de cette année-là. 
                                Sinon, si aucune année n'est sélectionnée, le graphique montrera les données pour toutes les années disponibles""")
